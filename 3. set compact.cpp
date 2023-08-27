@@ -1,48 +1,47 @@
-								//Set
+									//Set
 							//===============
 							
 							
 // Declaration
 //============
-	map <int, int> mp;		// Map with key type 'int' and value type 'int'
-	map <string, int> mp;	// Map with key type 'string' and value type 'int'
+	set <int> st;			// Set with type 'int'
+	set <string> st;		// Set with type 'string'
+	unordered_set <int> st;	// Unordered Set with type 'int'
 
 	
 // Assign Data
 //============
-	mp[key] = val			// Insert value 'val' at the index 'key'
+	st.insert(x)		// Insert the element 'x'
 
 
 // Delete Data
 //=============
-	mp.earse(key)			// Removes the index 'key'
+	st.earse(x)			// Removes the element 'x'
 
 
 // Iterations
 //============
 
 	// Loop Iterator (Shortcut Method)
-	for(auto item : mp){
-		cout << item.first << " ";		// This is the index
-		cout << item.second << " ";		// This is the value at index 'key'
-		cout << mp[item.first] << " ";	// This is also the value at index 'key'
+	for(auto item : st){
+		cout << item << " ";		// This is the element
 	}
 	
 
 // Important Functions
 //====================
-	mp.begin();	// Address of the first pair  
-	mp.end();	// Address *after the last pair, not the last pair
-	mp.size();	// return the size of the map
+	st.begin();	// Address of the first element  
+	st.end();	// Address *after the last element, not the last element
+	st.size();	// return the size of the set
 
 	
 // Find Data
 //==========
-	auto return_val = mp.find(key) 	// if the index 'key' not found then
-									// 'return_val' will be mp.end()
+	auto return_val = st.find(x) 	// if the element 'x' not found then
+									// 'return_val' will be st.end()
 	
 	// implementation
-	if(mp.find(key) != mp.end()){
+	if(st.find(x) != st.end()){
 		//found
 	}
 	else{
@@ -50,7 +49,7 @@
 	}
 	
 	// implementation
-	if(mp.find(key) != mp.end()){
+	if(st.find(x) != st.end()){
 		//not found
 	}
 	else{
@@ -62,7 +61,7 @@
 								//Complexity in O()
 						//=============================
 						
-//		Operation			  Map						unordered_map
+//		Operation			  Set						unordered_set
 //================================================================================
 //					Best	Average		Worst		Best	Average		Worst	
 //================================================================================
